@@ -53,7 +53,7 @@ def main():
     with open("data/capitals.csv") as f:
         rows = list(csv.DictReader(f))
 
-    dest_rows = [row for row in rows if row["capital"] != "Berlin"]
+    dest_rows = rows
     lats = [float(row["lat"]) for row in dest_rows]
     lons = [float(row["lon"]) for row in dest_rows]
 
